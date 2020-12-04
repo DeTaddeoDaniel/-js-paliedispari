@@ -1,35 +1,48 @@
 /*
-    Fizz Buzz test:
-    
-    Scrivi un programma che stampi i numeri da 1 a
-    100, ma per i multipli di 3 stampi “Fizz” al posto del
-    numero, per i multipli di 5 stampi “Buzz” e per i
-    numeri che sono sia multipli di 3 che di 5 stampi
-    “FizzBuzz”.
+
+    Determina se un numero è pari o dispari
+
 */
 
-/* Determina se una parola è palindroma dando vero o falso*/
+/* richiesta numero*/
+function numeroInserito(){
 
+    var numeroInserito = -1;
+    var inputvalido = false;
+    
+    /* richiesta numero all'utente*/
+    do {
+
+        /* Inserisci numero */
+        numeroInserito = parseInt(prompt("Inserisci un numero"));
+
+        /* check numero valido */
+        if(numeroInserito == false ) {
+            inputvalido = false;
+            console.log("Inserito numero non valido");
+        } else {
+            inputvalido = true;
+            console.log("Inserito numero valido : " + numeroInserito);
+        }
+
+    } while ( !inputvalido);
+
+   return numeroInserito;
+    
+}
+
+/* Programma*/
 function app(){
 
-    /*riempi array grande*/
-    var numeroMinimo = 1;
-    var numeroMassimo = 100;
+    /*inserisci numero*/
+    var numero = numeroInserito();
     
-    for (var i = numeroMinimo; i <= numeroMassimo; i++) {
-
-        if (i % 3 == 0 && i % 5 == 0)
-            console.log("- numero " + i + " : FizzBuzz");
-    
-        else if (i % 3 == 0)
-            console.log("- numero " + i + " : Fizz");
-
-        else if (i % 5 == 0)
-            console.log("- numero " + i + " : Buzz");
-
-        else
-            console.log( "- numero " + i);
-        }
+    /* Tipologia di numero */
+    if( numero % 2 == 0){
+        console.log(" Il numero è pari");
+    } else {
+        console.log("Il numero è dispari");
+    }
 
 }
 
