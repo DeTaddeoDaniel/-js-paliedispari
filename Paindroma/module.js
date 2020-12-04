@@ -61,8 +61,12 @@ function metaParola(parola){
         console.log("Parola con lettere pari");
     }
     
-    return meta / 2;
+    return Math.ceil(parola.length / 2 );
 }
+/* Mettere in disparte io e dare spazio al noi*/ 
+/* Mettersi al gioco 100%*/ 
+/** mettere in gioco tutto quello che ho imparato/ */
+
 
 function app(){
 
